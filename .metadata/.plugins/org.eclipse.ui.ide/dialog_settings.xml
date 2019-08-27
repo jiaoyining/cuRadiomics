@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+		<item value="com.nvidia.cuda.ide.feature:9.2.0.201806130420"/>
+		<item value="org.eclipse.cdt.build.crossgcc:8.4.0.201406111759"/>
+		<item value="org.eclipse.cdt.gdb:8.5.0.201409172108"/>
+		<item value="org.eclipse.cdt.launch.remote:8.5.0.201409172108"/>
+		<item value="org.eclipse.cdt:8.4.0.nvidia-qualifier"/>
+		<item value="org.eclipse.cvs:1.4.100.v20140925-0400"/>
+		<item value="org.eclipse.egit:3.4.1.201406201815-r"/>
+		<item value="org.eclipse.emf.common:2.10.1.v20140901-1043"/>
+		<item value="org.eclipse.emf.ecore:2.10.1.v20140901-1043"/>
+		<item value="org.eclipse.help:2.0.102.v20140925-0400"/>
+		<item value="org.eclipse.jgit:3.4.1.201406201815-r"/>
+		<item value="org.eclipse.platform:4.4.0.v20140925-0400"/>
+		<item value="org.eclipse.rcp:4.4.0.v20140925-0400"/>
+		<item value="org.eclipse.rse.core:3.4.100.nvidia-qualifier"/>
+		<item value="org.eclipse.rse.ftp:3.2.0.201406020016"/>
+		<item value="org.eclipse.rse.local:2.1.500.201406020016"/>
+		<item value="org.eclipse.rse.ssh:3.0.500.201406020016"/>
+		<item value="org.eclipse.rse.telnet:2.3.100.201406020016"/>
+		<item value="org.eclipse.rse.terminals:1.2.100.201406060905"/>
+		<item value="org.eclipse.tm.terminal:3.2.300.201406060905"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/jyn/cuRadiomics/curadiomics"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="199" key="DIALOG_X_ORIGIN"/>
+		<item value="97" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>
