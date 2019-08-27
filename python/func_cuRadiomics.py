@@ -10,7 +10,7 @@ import time
 def func_cuRadiomics(yaml_addr, image, mask):
     tfe.enable_eager_execution()
     a = tf.constant(value=1)
-    _RadiomicsGLCMModule = tf.load_op_library('../build/libRadiomics.so').radiomics
+    _RadiomicsGLCMModule = tf.load_op_library('./build/libRadiomics.so').radiomics
 
     features_name_glcm = ["Autocorrelation",
                           "JointAverage",
@@ -78,16 +78,17 @@ def func_cuRadiomics(yaml_addr, image, mask):
     NumOfFeatures = 0
     Names = []
     if GLCM == 1:
-        Names = [Names, features_name_glcm]
+        Names = Names + features_name_glcm
         NumOfFeatures += 23
     if FirstOrder == 1:
-        Names = [Names, features_name_firstorder]
+        Names = Names + features_name_firstorder
         NumOfFeatures += 18
 
     arr_features = np.reshape(arr_features, newshape=[NumOfFeatures, image.shape[0]])
-    arr_features = np.transpose(arr_features)
 
-    RadiomicsFeatures = zip(Names, arr_features)
+    RadiomicsFeatures = {}
+    for i in range(len(Names)):
+        RadiomicsFeatures[Names[i]] = arr_features[i, :]
 
     return RadiomicsFeatures
 

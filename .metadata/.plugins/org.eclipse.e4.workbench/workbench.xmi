@@ -3,7 +3,7 @@
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList/>&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:com.nvidia.cuda.ide</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_QHu7IsemEemApLpZJhq4Kw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_QPmdssemEemApLpZJhq4Kw" label="%trimmedwindow.label.eclipseSDK" x="65" y="24" width="1248" height="1056">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_QHu7IsemEemApLpZJhq4Kw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_QPmdssemEemApLpZJhq4Kw" label="%trimmedwindow.label.eclipseSDK" x="65" y="24" width="1244" height="1056">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workingSets/>"/>
@@ -79,6 +79,7 @@
                 <children xsi:type="basic:PartStack" xmi:id="_QSrm6semEemApLpZJhq4Kw" elementId="topRight" containerData="2500" selectedElement="_QSrm68emEemApLpZJhq4Kw">
                   <tags>newtablook</tags>
                   <tags>active</tags>
+                  <tags>noFocus</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_QSrm68emEemApLpZJhq4Kw" elementId="org.eclipse.ui.views.ContentOutline" ref="_QSn8gsemEemApLpZJhq4Kw"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_QSrm7MemEemApLpZJhq4Kw" elementId="org.eclipse.cdt.make.ui.views.MakeView" ref="_QSqYwMemEemApLpZJhq4Kw"/>
                 </children>
@@ -186,7 +187,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_QQM6oMemEemApLpZJhq4Kw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_rnJoM8enEem9HIv4HPybfg" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_QH_Z28emEemApLpZJhq4Kw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_dTA8sMiCEem1MZ0rhVSCZg" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_QH_Z28emEemApLpZJhq4Kw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_QQM6ocemEemApLpZJhq4Kw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -210,7 +211,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_QQNhsMemEemApLpZJhq4Kw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_rnMEdMenEem9HIv4HPybfg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_QH-ywsemEemApLpZJhq4Kw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_dTDY8siCEem1MZ0rhVSCZg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_QH-ywsemEemApLpZJhq4Kw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_QQNhscemEemApLpZJhq4Kw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
