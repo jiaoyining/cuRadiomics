@@ -661,8 +661,9 @@ __global__ void calculate_glcm_kernel_rl(int *image, int *glcm, int *dev_size, i
 			iy + dev_angles[a * 2 + 1] >= 0 && iy + dev_angles[a * 2 + 1] < dev_size[1])
 		{
 			j = ip + dev_angles[a * 2] * dev_stride[0] + dev_angles[a * 2 + 1] * dev_stride[1];
-			glcm_idx = int(image[ip] > -1) * int(image[j] > -1) * (a + image[j] * dev_na + image[ip] * dev_na * dev_ng + img_ith * dev_ng * dev_ng * dev_na);
-			atomicAdd(&glcm[glcm_idx], 1 * int(image[ip] > -1) * int(image[j] > -1));
+			glcm_idx = int(image[ip] > -1) * int(image[j] > -1) * (a + (image[j]-1) * dev_na + (image[ip]-1) * dev_na * dev_ng + img_ith * dev_ng * dev_ng * dev_na);
+			if (glcm_idx>0){
+			atomicAdd(&glcm[glcm_idx], 1 * int(image[ip] > -1) * int(image[j] > -1));}
 		}
 	}
 }
@@ -990,6 +991,9 @@ __global__ void glcm_features(float *rst,
     iy = ipix / NA % Ng;
     ia = ipix % NA;
 
+    int ix_2122 = ipix / NA / (Ng / 2);
+    int iy_2122 = ipix / NA % (Ng / 2);
+
     atomicAdd(&rst[0 * batch_size + img_ith], Pn[ip] * (ix + 1) * (iy + 1) / NA);
     atomicAdd(&rst[1 * batch_size + img_ith], Pn[ip] * float(ix + 1) / NA);
     atomicAdd(&rst[2 * batch_size + img_ith], powf((float(ix + 1) + float(iy + 1) - ux[img_ith * NA + ia] - uy[img_ith * NA + ia]), 4) * Pn[ip] / NA);
@@ -1012,8 +1016,8 @@ __global__ void glcm_features(float *rst,
 
     if (ix == 0 and iy == 0)
    	{atomicAdd(&rst[19 * batch_size + img_ith], float(maxp[img_ith * NA + ia]) / (s[img_ith * NA + ia] + epsilon) / NA);}
-    atomicAdd(&rst[20 * batch_size + img_ith], Pxay[img_ith * NA * Ng * 2 + ix * NA + ia] * (ix + 2) * float(iy == 0) / NA);
-    atomicAdd(&rst[21 * batch_size + img_ith], -Pxay[img_ith * Ng * NA * 2 + ix * NA + ia] * log2f(Pxay[img_ith * Ng * NA * 2 + ix * NA + ia] + epsilon) * float(iy == 0) / NA);
+    atomicAdd(&rst[20 * batch_size + img_ith], Pxay[img_ith * NA * Ng * 2 + ix_2122 * NA + ia] * (ix_2122 + 2) * float(iy_2122 == 0) / NA);
+    atomicAdd(&rst[21 * batch_size + img_ith], -Pxay[img_ith * Ng * NA * 2 + ix_2122 * NA + ia] * log2f(Pxay[img_ith * Ng * NA * 2 + ix_2122 * NA + ia] + epsilon) * float(iy_2122 == 0) / NA);
     atomicAdd(&rst[22 * batch_size + img_ith], Pn[ip] * powf(float(ix + 1 - ux[img_ith * NA + ia]), 2) / NA);
 
 

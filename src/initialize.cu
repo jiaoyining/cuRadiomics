@@ -36,7 +36,7 @@ __global__ void Preprocessing_image_GLCM(int *dev_image, const int *image, int M
 	int threads = blockDim.x * threadIdx.y + threadIdx.x;
 	int ip = blocks * blockDim.x * blockDim.y + threads;
 
-	atomicExch(&dev_image[ip], (image[ip]-Min_V)/bin_width);
+	atomicExch(&dev_image[ip], image[ip]==-1?-1:(image[ip]-Min_V)/bin_width);
 
 }
 
