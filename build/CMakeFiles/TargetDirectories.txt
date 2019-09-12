@@ -1,3 +1,0 @@
-/home/jyn/cuRadiomics/curadiomics/build/CMakeFiles/edit_cache.dir
-/home/jyn/cuRadiomics/curadiomics/build/CMakeFiles/rebuild_cache.dir
-/home/jyn/cuRadiomics/curadiomics/build/CMakeFiles/Radiomics.dir
