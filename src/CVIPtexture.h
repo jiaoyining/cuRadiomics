@@ -1,27 +1,4 @@
-/***************************************************************************
-* ======================================================================
-* Computer Vision/Image Processing Tool Project - Dr. Scott Umbaugh SIUE
-* ======================================================================
-*
-*             File Name: CVIPtexture.h
-*           Description: contains function prototypes, type names, constants,
-*			 etc. related to libdataserv (Data Services Toolkit.)
-*         Related Files: Imakefile, cvip_pgmtexture.c
-*   Initial Coding Date: 6/19/96
-*           Portability: Standard (ANSI) C
-*             Credit(s): Steve Costello
-*                        Southern Illinois University @ Edwardsville
-*
-** Copyright (C) 1993 SIUE - by Gregory Hance.
-**
-** Permission to use, copy, modify, and distribute this software and its
-** documentation for any purpose and without fee is hereby granted, provided
-** that the above copyright notice appear in all copies and that both that
-** copyright notice and this permission notice appear in supporting
-** documentation.  This software is provided "as is" without express or
-** implied warranty.
-**
-****************************************************************************/
+
 #ifndef _CVIP_texture
 #define _CVIP_texture
 
