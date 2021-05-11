@@ -22,6 +22,7 @@ You can directly use it or choose whether to compile it again by yourself.
 If you want to change some parameters such as the binwidth of GLCM, you need to use the CMakeLists.txt file to compile it:
 
 * cd
+* mkdir build
 * cd curadiomics/build/
 * cmake ..
 * make
