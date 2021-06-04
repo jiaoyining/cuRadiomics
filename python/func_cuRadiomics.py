@@ -1,7 +1,7 @@
 import yaml
 import numpy as np
 import SimpleITK as sitk
-from ToolsFunc import *
+from .ToolsFunc import *
 import tensorflow as tf
 import tensorflow.contrib.eager as tfe
 import time
